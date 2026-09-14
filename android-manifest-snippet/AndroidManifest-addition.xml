@@ -1,0 +1,13 @@
+<!--
+	Add this <intent-filter> inside the <activity android:name=".MainActivity">
+	block in android/app/src/main/AndroidManifest.xml (Capacitor generates
+	that file when you run `npx cap add android` — find the existing
+	MainActivity <activity> tag and add this alongside its other
+	intent-filters, don't replace the whole activity block).
+-->
+<intent-filter>
+	<action android:name="android.intent.action.VIEW" />
+	<category android:name="android.intent.category.DEFAULT" />
+	<category android:name="android.intent.category.BROWSABLE" />
+	<data android:scheme="kikundifybudget" android:host="auth-callback" />
+</intent-filter>
