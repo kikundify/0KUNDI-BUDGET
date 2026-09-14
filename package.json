@@ -1,0 +1,20 @@
+{
+	"name": "kikundify-budget-app",
+	"version": "0.1.0",
+	"description": "Capacitor shell for Kikundify Budget — loads the existing WordPress dashboard, adds native M-Pesa SMS capture.",
+	"scripts": {
+		"sync": "npx cap sync android",
+		"open": "npx cap open android"
+	},
+	"dependencies": {
+		"@capacitor/core": "^6.1.0",
+		"@capacitor/android": "^6.1.0",
+		"@capacitor/preferences": "^6.0.2",
+		"@capacitor/browser": "^6.0.2",
+		"@capacitor/app": "^6.0.1",
+		"capacitor-sms-inbox": "^1.0.0"
+	},
+	"devDependencies": {
+		"@capacitor/cli": "^6.1.0"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"appId": "com.kikundify.budget",
+	"appName": "Kikundify Budget",
+	"webDir": "www",
+	"server": {
+		"url": "https://kikundify.com/budget-dashboard/",
+		"cleartext": false
+	},
+	"android": {
+		"allowMixedContent": false
+	}
+}
