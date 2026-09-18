@@ -1,7 +1,5 @@
 name: Build Android Debug APK
 
-# Runs on every push to main, and can also be triggered manually from the
-# Actions tab (the workflow_dispatch line below adds a "Run workflow" button).
 on:
   push:
     branches: [main]
@@ -25,13 +23,10 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      # GitHub's Ubuntu runners come with the Android SDK pre-installed —
-      # no separate SDK setup step needed.
-
       - name: Install dependencies
         run: npm install
 
-        - name: Install fixed debug keystore
+      - name: Install fixed debug keystore
         run: |
           mkdir -p ~/.android
           cp kikundify-debug.keystore ~/.android/debug.keystore
