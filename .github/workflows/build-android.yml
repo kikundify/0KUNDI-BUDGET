@@ -1,5 +1,7 @@
 name: Build Android Debug APK
 
+# Runs on every push to main, and can also be triggered manually from the
+# Actions tab (the workflow_dispatch line below adds a "Run workflow" button).
 on:
   push:
     branches: [main]
@@ -23,6 +25,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      # GitHub's Ubuntu runners come with the Android SDK pre-installed —
+      # no separate SDK setup step needed.
+
       - name: Install dependencies
         run: npm install
 
@@ -39,6 +44,9 @@ jobs:
 
       - name: Patch AndroidManifest.xml (login callback intent-filter)
         run: node scripts/patch-android-manifest.js
+
+      - name: Show patched AndroidManifest.xml for inspection
+        run: cat android/app/src/main/AndroidManifest.xml
 
       - name: Sync Capacitor
         run: npx cap sync android
