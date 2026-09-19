@@ -1,6 +1,6 @@
 {
-	"appId": "com.kikundify.budget",
-	"appName": "Kikundify Budget",
+	"appId": "com.kikundify.wheresmymoney",
+	"appName": "Kikundify Where's My Money",
 	"webDir": "www",
 	"server": {
 		"url": "https://kikundify.com/budget-dashboard/",
